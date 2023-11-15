@@ -47,7 +47,7 @@ console.log('you added '+name+' as a new contact');
     <Route path="/" element={ <Root/> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> }/>
-      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage /> /* Add props to AppointmentsPage */ }/>
+      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage addAppointment={addAppointment} appointment={appointment} contacts={contacts}/> /* Add props to AppointmentsPage */ }/>
     </Route>
   ));
   
